@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/style-reset.css">
+    <link rel="stylesheet" href="css/header/header.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <title>My To Do List App</title>
+    <link rel="icon" type="image/jpg" href="img/Icon.png">
+    <meta name="description" content="My To Do List App, this application allows you to properly and quickly organize your pending tasks">
+</head>
+<body>
+    <header class="header"> <!-- NAV BAR-->
+        <!-- Using BEM METHODOLOGY, BLOCK, ELEMENT, MODIFIER-->
+        <article class="logo"> <!-- BLOCK-->
+            <img src="img/Icon.png" class="logo__image"> <!-- ELEMENT-->
+            <h1 class="logo__tittle--light">my to do list app</h1> <!-- MODIFIER -->
+        </article>
+        <article class="nav-bar">
+            <nav class="nav-bar__list-container">
+                <a href="#main-card" class="nav_bar__option _option-bolder" data-li-main>my list</a>
+                <a href="" class="nav_bar__option">instructions</a>
+                <a href="https://johan2021usa.github.io/portfolio-development/" target="_blank" rel="noreferrer" class="nav_bar__option">about me</a>
+            </nav>
+        </article>
+    </header>
+
+    <main class="main">
+
+        <section class="card" id="main-card"> <!-- CARD TASK -->
+            <ul class="card__u-list">
+                <li class="card__description"><h3>task description</h3></li>
+                <li class="card__status"><h3>status</h3></li>
+                <li class="card__actions"><h3>actions</h3></li>
+            </ul>
+
+            <div class="task-container" data-cont-task></div>
+        </section>
+
+        <section class="task-form"> <!-- FORM -->
+            <h3 class="task-form__tittle">create task</h3>
+            <form class="form" data-button-form>
+                <input required class="form__input" type="text" name="task" placeholder="task description" autocomplete="off" data-form-inp>
+                <button type="submit" class="form__button">create</button>
+            </form>
+        </section>
+
+    </main>
+    <!--<footer>
+
+    </footer>-->
+    <script type="module" src="js/controllerTask.js"></script>
+</body>
+</html>

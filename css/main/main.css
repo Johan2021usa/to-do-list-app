@@ -1,0 +1,201 @@
+/*
+main color: BCE1E5
+card color: C7EEF2
+nav color: 356166
+*/
+:root{
+    --clr-bg: #BCE1E5;
+}
+
+body{
+    /* Use this to cover the entire viewport */
+    min-height: 100vh;
+    background-color: #BCE1E5;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 1rem;
+}
+.card{
+    background-color: #C7EEF2;
+    width: 90vh;
+    height: 70vh;
+    padding: 1rem 1.4rem 1rem 1.4rem;
+    margin: 0rem 0rem 2rem 0rem;
+    border-radius: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.task-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*min-height: 90%;
+    height: max-content;*/
+
+    height: 90%;
+    background: #BCE1E5 url("../../img/task-list.png") no-repeat center;
+    background-size: 18rem;
+
+    padding-bottom: 0.7rem;
+    border-radius: 20px;
+    overflow: auto;
+}
+.task-container::-webkit-scrollbar{
+    display: none;
+}
+.task-container__u-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: content-box;
+    margin-top: 0.7rem;
+    border-radius: 45px;
+    padding: 1rem 0.5rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #99785F;
+}
+._u-list_pending{
+    background-color: #E6DEA5;
+}
+._u-list_completed{
+    background-color: #C8D3E6;
+}
+.task-container__description{
+    text-transform: capitalize;
+    margin-bottom: 0.3rem;
+}
+.task-container__option-pending,
+.task-container__option-completed{
+    font-weight: bold;
+    background-color: white;
+}
+.task-container__status{
+    margin-bottom: 0.3rem;
+    border-radius: 40px;
+    padding: 0rem 0.2rem 0rem 0rem;
+    border-style: hidden;
+
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    text-transform: capitalize;
+    color: #99785F;
+    cursor: pointer;
+}
+._status--pending{
+    background-color: #E6DEA5;
+}
+._status--completed{
+    background-color: #C8D3E6;
+}
+.task-container__delete{
+    border: none;
+    background-color: #E6D4B1;
+    width: 14vh;
+    height: 3.5vh;
+    border-radius: 11px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #356166;
+
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.1s;
+}
+.task-container__delete:hover{
+    transform: scale(1.1);
+}
+.task-container__delete:active{
+    background-color: #E68E4E;
+}
+.task-form__tittle{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1.4rem 1rem 1.4rem;
+
+    font-family: 'Carter One', cursive;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-shadow: 0px 1px 2px black;
+}
+.task-form{
+    background-color: #C7EEF2;
+    width: 60vh;
+    height: 30vh;
+    border-radius: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:20vh;
+}
+.form__button{
+    border: none;
+    background-color: #E6DEA5;
+    width: 14vh;
+    height: 5.5vh;
+    border-radius: 11px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #356166;
+    cursor: pointer;
+
+    transition: transform 0.3s, background-color 0.1s;
+}
+.form__button:hover{
+    transform: scale(1.1);
+}
+.form__button:active{
+    background-color: #E6D667;
+}
+.form__input{
+    display: flex;
+    border: none;
+    font-size: 1.1rem;
+    width: 85%;
+
+    text-align: center;
+
+    color: #99785F;
+}
+.form__input::placeholder{
+    color: #99785F;
+    opacity: 85%;
+    text-transform: capitalize;
+}
+.card__description{
+    margin-bottom: 0.3rem;
+}
+.card__status{
+    margin-bottom: 0.3rem;
+}
+.card__u-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0rem 0rem 1.2rem 0rem;
+    justify-content:space-around;
+
+    font-family: 'Carter One', cursive;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-shadow: 0px 1px 2px black;
+}
