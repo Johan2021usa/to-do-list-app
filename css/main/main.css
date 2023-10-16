@@ -22,23 +22,41 @@ body{
 .card{
     background-color: #C7EEF2;
     width: 90vh;
-    height: 70vh;
-    padding: 1rem 1.4rem 1rem 1.4rem;
+    height: max-content;
+    padding: 1rem 1.4rem;
     margin: 0rem 0rem 2rem 0rem;
     border-radius: 32px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.card__u-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-bottom: 1.2rem;
+
+    font-family: 'Carter One', cursive;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-shadow: 0px 1px 2px black;
+}
+.card__description{
+    margin-bottom: 0.3rem;
+}
+.card__status{
+    margin-bottom: 0.3rem;
 }
 .task-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 60vh;
 
     /*min-height: 90%;
     height: max-content;*/
 
-    height: 90%;
     background: #BCE1E5 url("../../img/task-list.png") no-repeat center;
-    background-size: 18rem;
+    background-size: 40vh;
 
     padding-bottom: 0.7rem;
     border-radius: 20px;
@@ -70,12 +88,16 @@ body{
 ._u-list_completed{
     background-color: #C8D3E6;
 }
+._u-list_ongoing{
+    background-color: #E6CEBC;
+}
 .task-container__description{
     text-transform: capitalize;
     margin-bottom: 0.3rem;
 }
 .task-container__option-pending,
-.task-container__option-completed{
+.task-container__option-completed,
+.task-container__option-ongoing{
     font-weight: bold;
     background-color: white;
 }
@@ -99,12 +121,15 @@ body{
 ._status--completed{
     background-color: #C8D3E6;
 }
+._status--ongoing{
+    background-color: #E6CEBC;
+}
 .task-container__delete{
     border: none;
-    background-color: #E6D4B1;
-    width: 14vh;
-    height: 3.5vh;
+    width: max-content;
+    padding: 0.2rem 1rem;
     border-radius: 11px;
+    background-color: #E6D4B1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     font-size: 1.1rem;
@@ -120,23 +145,27 @@ body{
 .task-container__delete:active{
     background-color: #E68E4E;
 }
+
+.task-form{
+    width: 60vh;
+    height: max-content;
+    padding: 1rem 0rem;
+    border-radius: 32px;
+
+    background-color: #C7EEF2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 .task-form__tittle{
     display: flex;
     justify-content: center;
-    padding: 1rem 1.4rem 1rem 1.4rem;
+    margin-bottom: 1.2rem;
 
     font-family: 'Carter One', cursive;
     color: #FFFFFF;
     text-transform: capitalize;
+    text-align: center;
     font-size: 1.2rem;
     text-shadow: 0px 1px 2px black;
-}
-.task-form{
-    background-color: #C7EEF2;
-    width: 60vh;
-    height: 30vh;
-    border-radius: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .form{
     display: flex;
@@ -145,35 +174,13 @@ body{
     align-items: center;
     height:20vh;
 }
-.form__button{
-    border: none;
-    background-color: #E6DEA5;
-    width: 14vh;
-    height: 5.5vh;
-    border-radius: 11px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    color: #356166;
-    cursor: pointer;
-
-    transition: transform 0.3s, background-color 0.1s;
-}
-.form__button:hover{
-    transform: scale(1.1);
-}
-.form__button:active{
-    background-color: #E6D667;
-}
 .form__input{
     display: flex;
     border: none;
-    font-size: 1.1rem;
     width: 85%;
 
     text-align: center;
-
+    font-size: 1.1rem;
     color: #99785F;
 }
 .form__input::placeholder{
@@ -181,21 +188,24 @@ body{
     opacity: 85%;
     text-transform: capitalize;
 }
-.card__description{
-    margin-bottom: 0.3rem;
-}
-.card__status{
-    margin-bottom: 0.3rem;
-}
-.card__u-list{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0rem 0rem 1.2rem 0rem;
-    justify-content:space-around;
+.form__button{
+    width: max-content;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 11px;
+    background-color: #E6DEA5;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    font-family: 'Carter One', cursive;
-    color: #FFFFFF;
+    font-size: 1.1rem;
     text-transform: capitalize;
-    font-size: 1.2rem;
-    text-shadow: 0px 1px 2px black;
+    color: #356166;
+
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.1s;
+}
+.form__button:hover{
+    transform: scale(1.1);
+}
+.form__button:active{
+    background-color: #E6D667;
 }

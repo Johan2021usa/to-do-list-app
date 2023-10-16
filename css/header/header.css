@@ -4,7 +4,7 @@
     box-sizing: content-box;
     justify-content: space-evenly;
     height: content-box;
-    padding: 0.3rem 1rem;
+    /*padding: 0.3rem 1rem;*/
 
     background-color: #356166;
     color: #FFFFFF;
@@ -15,6 +15,7 @@
     align-items: center;
     width: 90vh;
     padding-bottom: 0.3rem;
+    margin-bottom: 0.3rem;
 
     font-family: 'Carter One', cursive;
     font-size: 1.30rem;
@@ -25,9 +26,10 @@
     margin-right: 1rem;
 }
 .nav-bar{
-    width: 60vh;
+    width: max-content;
     display: flex;
     align-items: center;
+    margin-bottom: 0.3rem;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 1.35rem;
