@@ -1,4 +1,5 @@
 const taskContainer = document.querySelector("[data-cont-task]");
+const dialog = document.querySelector("[data-dialog-instructions]");
 
 const showTask = (task)=>{
     const taskUl = `
@@ -61,6 +62,15 @@ const modifyVisual = (ulElement, select, statusSet, statusVal)=>{
      * */
 }
 
+const showDialog = ()=>{
+    dialog.showModal();
+    const dialogCloseButton = document.querySelector("[data-button-dialog]");
+    return dialogCloseButton;
+}
+const closeDialog = ()=>{
+    dialog.close();
+}
+
 const resetForm = ()=>{
     //reset method only works on forms
     document.querySelector("[data-button-form]").reset();
@@ -71,4 +81,4 @@ const resetTaskContainer = ()=>{
     taskContainer.innerHTML = "";
 }
 
-export {showTask, resetForm, modifyVisual, resetTaskContainer};
+export {showTask, resetForm, modifyVisual, resetTaskContainer, showDialog, closeDialog};

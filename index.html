@@ -7,38 +7,39 @@
 
     <!-- CSS files -->
     <link rel="stylesheet" href="css/style-reset.css">
-    <link rel="stylesheet" href="css/header/header.css">
-    <link rel="stylesheet" href="css/main/main.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@400&display=swap" rel="stylesheet">
 
     <title>My To Do List App</title>
     <link rel="icon" type="image/jpg" href="img/Icon.png">
     <meta name="description" content="My To Do List App, this application allows you to properly and quickly organize your pending tasks">
 </head>
 <body>
+
     <header class="header"> <!-- NAV BAR-->
         <!-- Using BEM METHODOLOGY, BLOCK, ELEMENT, MODIFIER-->
         <article class="logo"> <!-- BLOCK-->
             <img src="img/Icon.png" class="logo__image"> <!-- ELEMENT-->
             <h1 class="logo__tittle--light">my to do list app</h1> <!-- MODIFIER -->
         </article>
+
         <article class="nav-bar">
             <nav class="nav-bar__list-container">
-                <a href="#main-card" class="nav_bar__option _option-bolder" data-li-main>my list</a>
-                <a href="" class="nav_bar__option">instructions</a>
-                <a href="https://johan2021usa.github.io/portfolio-development/" target="_blank" rel="noreferrer" class="nav_bar__option">about me</a>
+                <a class="nav_bar__option _option-bolder" data-li-instructions>instructions</a>
+                <a href="https://johan2021usa.github.io/portfolio-development/" target="_blank" rel="noreferrer" class="nav_bar__option">portfolio</a>
+                <a href="#about-me" class="nav_bar__option" data-li-main>about me</a>
             </nav>
         </article>
     </header>
 
     <main class="main">
-
-        <section class="card" id="main-card"> <!-- CARD TASK -->
+        <section class="card"> <!-- CARD TASK -->
             <ul class="card__u-list">
                 <li class="card__description"><h3>task  description</h3></li>
                 <li class="card__status"><h3>status</h3></li>
@@ -55,10 +56,54 @@
             </form>
         </section>
 
+        <dialog class="dialog-instructions" data-dialog-instructions >
+            <header>
+                <h3>Welcome to My To Do List App</h3>
+            </header>
+            <section>
+                <p>You can use this application to create a list of tasks to manage your time properly,
+                follow the next instructions to use the app:</p>
+                <ol>
+                    <li>Fill out the Task Description field with your specific task</li>
+                    <li>Add your task to the list by pressing the button Create</li>
+                    <li>Change the task status among pending, completed or ongoing</li>
+                    <li>You can remove from the list the tasks that you have already completed by pressing the button Delete</li>
+                    <li>The color of each task will change according to their status</li>
+                    <li>Your tasks will be displayed whether you close the tab or browser</li>
+                </ol>
+                <button data-button-dialog>close instructions</button>
+            </section>
+        </dialog>
     </main>
-    <!--<footer>
 
-    </footer>-->
+    <footer class="my-footer" id="about-me"> <!-- BLOCK-->
+        <section class="my-footer__main">
+            <article class="logo-article"> <!-- BLOCK-->
+                <img src="img/icon-dark.png" class="logo-article__image">
+                <h1 class="logo-article__tittle--dark">my to do list app</h1> <!-- MODIFIER -->
+            </article>
+            <p class="logo-article__paragraph _bolder">Manage your tasks properly</p> <!-- ELEMENT-->
+            <p class="logo-article__paragraph">Copyright &COPY Software Galeras, 2023</p>
+        </section>
+
+        <section class="my-footer__contact"> <!-- BLOCK-->
+            <article class="contact-article"><!-- BLOCK-->
+                <h5 class="contact-article__tittle _bolder">company</h5>
+                <h3 class="contact-article__content"><a class="contact-article__content-link">Contact me</a></h3>
+            </article>
+            <article class="social-article"><!-- BLOCK-->
+                <h5 class="social-article__tittle _bolder">follow me</h5>
+                <h3 class="social-article__content"><a class="social-article__content-link" href="https://github.com/Johan2021usa" target="_blank" rel="noreferrer">Github</a></h3>
+                <h3 class="social-article__content"><a class="social-article__content-link" href="https://www.linkedin.com/in/jairo-johan-lasso-47165a223/" target="_blank" rel="noreferrer">LinkedIn</a></h3>
+                <h3 class="social-article__content"><a class="social-article__content-link" href="https://www.instagram.com/sukha_snd/" rel="noreferrer" target="_blank">Instagram</a></h3>
+                <div class="social-article__container-icons">
+                    <img class="social-article__icons" src="img/linkedin.png">
+                    <img class="social-article__icons" src="img/instagram.png">
+                    <img class="social-article__icons" src="img/github.png">
+                </div>
+            </article>
+        </section>
+    </footer>
     <script type="module" src="js/controllerTask.js"></script>
 </body>
 </html>

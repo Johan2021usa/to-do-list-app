@@ -1,10 +1,11 @@
-import {showTask, resetForm, modifyVisual, resetTaskContainer} from "./viewTask.js";
+import {showTask, resetForm, modifyVisual, resetTaskContainer,showDialog, closeDialog} from "./viewTask.js";
 import {Task} from "./modelTask.js";
 
 (
     ()=>{
         const form = document.querySelector("[data-button-form]");
         let taskContainer = document.querySelector("[data-cont-task]");
+        const instruActivateButton = document.querySelector("[data-li-instructions]");
 
         const changeStyles = ()=>{
             let statusSet;
@@ -112,10 +113,20 @@ import {Task} from "./modelTask.js";
             modifyVisual(taskCont,select,statusSet,status);
         }
 
+        const activateInstructions = (event)=>{
+            event.preventDefault();
+            showDialog();
+            showDialog().addEventListener("click", deactivateInstructions);
+        }
+        const deactivateInstructions = ()=>{
+            closeDialog();
+        }
+
         // Listeners that are ready to activate a method according to our actions
         form.addEventListener("submit", createTask); // create task
         taskContainer.addEventListener("click", changeStatus); // change status
         taskContainer.addEventListener("click", deleteTask); // delete tasks
+        instruActivateButton.addEventListener("click", activateInstructions);
     }
 )();
 

@@ -1,13 +1,17 @@
 .header{
     display: flex;
     flex-wrap: wrap;
-    box-sizing: content-box;
     justify-content: space-evenly;
-    height: content-box;
-    /*padding: 0.3rem 1rem;*/
+
+    /* use this to become responsive the navbar with out the usage of max content as main measure
+    * this is  useful when we need to use measures with values, px, rem, etc. */
+    min-height: 70px;
+    max-height: max-content;
+    /* content box is the default value and box sizing defines
+    the size according to height and width only*/
+    box-sizing: border-box;
 
     background-color: #356166;
-    color: #FFFFFF;
 }
 .logo{
     display: flex;
@@ -15,21 +19,25 @@
     align-items: center;
     width: 90vh;
     padding-bottom: 0.3rem;
-    margin-bottom: 0.3rem;
+    margin: 0.3rem 0rem;
 
     font-family: 'Carter One', cursive;
     font-size: 1.30rem;
     text-transform: capitalize;
+    box-sizing: border-box;
 }
 .logo__image{
-    width: 2.5rem;
+    width: 1.5rem;
     margin-right: 1rem;
 }
+.logo__tittle--light{
+    color: #FFFFFF;
+}
 .nav-bar{
-    width: max-content;
     display: flex;
     align-items: center;
     margin-bottom: 0.3rem;
+    width: 55vh;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 1.35rem;

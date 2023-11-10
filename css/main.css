@@ -5,11 +5,15 @@ nav color: 356166
 */
 :root{
     --clr-bg: #BCE1E5;
+    --clr-bg-nav: #356166;
+    --clr-bg-footer: #FFFFFF;
+    --clor-bg-cont: #C7EEF2;
 }
 
 body{
     /* Use this to cover the entire viewport */
-    min-height: 100vh;
+    /*min-height: 100vh;*/
+    box-sizing: border-box;
     background-color: #BCE1E5;
 }
 
@@ -18,6 +22,9 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2rem 1rem;
+    /* using this to provide the entire viewport as size for height*/
+    min-height: calc(100vh - 70px);
+    box-sizing: border-box;
 }
 .card{
     background-color: #C7EEF2;
@@ -55,7 +62,7 @@ body{
     /*min-height: 90%;
     height: max-content;*/
 
-    background: #BCE1E5 url("../../img/task-list.png") no-repeat center;
+    background: #BCE1E5 url("../img/task-list.png") no-repeat center;
     background-size: 40vh;
 
     padding-bottom: 0.7rem;
