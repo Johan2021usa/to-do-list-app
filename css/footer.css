@@ -45,6 +45,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.20rem;
     font-weight: normal;
+    color: var(--clr-bg-nav);
 }
 
 /* Section 2 */
@@ -62,6 +63,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.20rem;
     font-weight: normal;
+    color: var(--clr-bg-nav);
 }
 .contact-article__content,
 .social-article__content{
@@ -70,12 +72,23 @@
 .contact-article__content-link,
 .social-article__content-link{
     text-decoration: none;
+    color: var(--clr-bg-nav);
+    transition: color 1s;
+}
+.contact-article__content-link:active,
+.social-article__content-link:active{
+    text-decoration: none;
+    color:var(--clor-nav-active);
+}
+.social-article__container-icons{
+
 }
 .social-article__icons{
-    width: 2.5rem;
+    width: 2.6rem;
+    margin: 0rem 0.2rem;
 }
 
-/*  */
+/* Modifiers */
 ._bolder{
     font-weight: bolder;
     font-size: 1.20rem;

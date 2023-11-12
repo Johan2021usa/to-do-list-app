@@ -11,7 +11,7 @@
     the size according to height and width only*/
     box-sizing: border-box;
 
-    background-color: #356166;
+    background-color: var(--clr-bg-nav);
 }
 .logo{
     display: flex;
@@ -31,7 +31,7 @@
     margin-right: 1rem;
 }
 .logo__tittle--light{
-    color: #FFFFFF;
+    color: var(--clr-bg-footer);
 }
 .nav-bar{
     display: flex;
@@ -54,7 +54,7 @@
     cursor: pointer;
     transition: transform 0.4s, color 0.05s;
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--clr-bg-footer);
 }
 .nav_bar__option:hover{
     text-decoration: none;
@@ -62,7 +62,7 @@
 
 }
 .nav_bar__option:active{
-    color: #E6D667;
+    color: var(--clor-nav-active);
 }
 ._option-bolder{
     font-size: 1.25rem;
