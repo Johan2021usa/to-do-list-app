@@ -49,11 +49,12 @@ import {Task} from "./modelTask.js";
         changeStyles();
 
         const createTask = (event) => {
+            console.log("cerate task");
             event.preventDefault();
             //controller takes a string from the input
             const inputFormText = document.querySelector("[data-form-inp]").value;
             // controller creates an object from the input information: id, description, status
-            const idLocalEst = (localStorage.length).toString();
+            const idLocalEst = crypto.randomUUID();
             const taskObj = new Task(idLocalEst, inputFormText.toString(), "pending");
             // controller saves the object in local storage through the model
             taskObj.createStorage(taskObj);
@@ -73,6 +74,7 @@ import {Task} from "./modelTask.js";
         }
 
         const deleteTask = (element)=>{
+            console.log("changing status");
             // We instantiate the class Task in order to create a object that is going to server to obtain all class methods
             const allTasks2 = new Task();
             let parent = element.target.offsetParent; // use offsetParent to get the parent container
@@ -88,6 +90,7 @@ import {Task} from "./modelTask.js";
         }
 
         const changeStatus = (event) => {
+            console.log("changing status");
             // declarations to manage the model
             const allTasks3 = new Task();
             const taskCont = event.target.offsetParent;
