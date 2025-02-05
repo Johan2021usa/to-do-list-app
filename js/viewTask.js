@@ -2,6 +2,7 @@ const taskContainer = document.querySelector("[data-cont-task]");
 const dialog = document.querySelector("[data-dialog-instructions]");
 
 const showTask = (task)=>{
+    const taskContainer = document.querySelector("[data-cont-task]");
     const taskUl = `
         <li class="task-container__description">${task.description.toString()}</li>
         <li>
